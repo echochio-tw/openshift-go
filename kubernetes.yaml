@@ -1,0 +1,39 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: web-go
+  name: web-go
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+      matchLabels:
+	    app: web-go
+  template:
+    metadata:
+      name: web-go
+      labels:
+        app: web-go
+    spec:
+      containers:
+      - name: web-go
+        image: docker.io/echochio/go-web
+        ports:
+        - containerPort: 9090
+---
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: web-go
+  name: web-go
+  namespace: web-go
+spec:
+  type: NodePort
+  ports:
+  - port: 9090
+    targetPort: 9090
+	nodePort: 30703
+  selector:
+    app: web-go
