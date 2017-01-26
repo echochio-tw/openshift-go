@@ -1,5 +1,7 @@
-apiVersion: extensions/v1beta1
+# Example usage: kubectl create -f <this_file>
+
 kind: Deployment
+apiVersion: extensions/v1beta1
 metadata:
   labels:
     app: web-go
@@ -8,19 +10,20 @@ metadata:
 spec:
   replicas: 1
   selector:
-      matchLabels:
-	    app: web-go
+    matchLabels:
+      app: web-go
   template:
     metadata:
-      name: web-go
       labels:
         app: web-go
     spec:
       containers:
       - name: web-go
         image: docker.io/echochio/go-web
+        imagePullPolicy: Always
         ports:
         - containerPort: 9090
+          protocol: TCP
 ---
 kind: Service
 apiVersion: v1
@@ -28,12 +31,12 @@ metadata:
   labels:
     app: web-go
   name: web-go
-  namespace: web-go
+  namespace: default
 spec:
   type: NodePort
   ports:
   - port: 9090
     targetPort: 9090
-	nodePort: 30703
+    nodePort: 30707
   selector:
     app: web-go
