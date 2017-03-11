@@ -27,7 +27,7 @@ func randarc(canvas *svg.SVG, aw, ah, sw int, f1, f2 bool) {
 
 func main() {
 	http.Handle("/", http.HandlerFunc(circle))
-	err := http.ListenAndServe(":9090", nil)
+	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
