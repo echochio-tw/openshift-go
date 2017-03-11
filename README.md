@@ -7,6 +7,7 @@ git clone https://github.com/chio-nzgft/Docker-golang-web.git
 # build go-web
 
 go get github.com/ajstarks/svgo
+
 go build web.go
 
 # build docker images
