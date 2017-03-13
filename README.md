@@ -9,7 +9,7 @@ docker build -t openshift-go .
 
 # exec docker web
 
-docker run -d -p 192.168.0.70:9093:8080 web
+docker run -d -p 192.168.0.70:9093:8080 openshift-go
 
 # view http://192.168.0.70:9093/
 
