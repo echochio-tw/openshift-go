@@ -1,10 +1,11 @@
 # Docker-golang-web
 
+...
 git clone https://github.com/chio-nzgft/openshift-go
-
 cd openshift-go
-
 docker build -t openshift-go .
+...
+
 
 # exec docker web
 
