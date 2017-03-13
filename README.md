@@ -1,5 +1,19 @@
 # Docker-golang-web
 
+# import to openshift-web-console
+![alt tag](https://github.com/chio-nzgft/openshift-go/raw/master/pic1.png)
+
+![alt tag](https://github.com/chio-nzgft/openshift-go/raw/master/pic2.png)
+
+![alt tag](https://github.com/chio-nzgft/openshift-go/raw/master/pic3.png)
+
+![alt tag](https://github.com/chio-nzgft/openshift-go/raw/master/pic4.png)
+
+![alt tag](https://github.com/chio-nzgft/openshift-go/raw/master/pic5.png)
+
+
+# for local docker test :
+
 git clone https://github.com/chio-nzgft/openshift-go
 
 cd openshift-go
