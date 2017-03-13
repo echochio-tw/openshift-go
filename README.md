@@ -1,7 +1,7 @@
 # Docker-golang-web
 
 # import to openshift-web-console
-# images name : docker.io/echochio/openshift-go
+# image name : docker.io/echochio/openshift-go
 
 ![alt tag](https://github.com/chio-nzgft/openshift-go/raw/master/pic1.png)
 
